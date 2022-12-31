@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:29:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/12/31 18:42:21 by amait-ou         ###   ########.fr       */
+/*   Updated: 2022/12/31 19:06:43 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	main(void)
 	struct sigaction	sa;
 
 	sa.sa_sigaction = ft_server;
-	printf("[+] %d\n", getpid());
+	ft_putnbr(getpid());
+	ft_putchar('\n');
 	sa.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);

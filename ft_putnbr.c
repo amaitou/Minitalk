@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 19:26:25 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/12/31 19:06:19 by amait-ou         ###   ########.fr       */
+/*   Created: 2022/12/31 19:04:58 by amait-ou          #+#    #+#             */
+/*   Updated: 2022/12/31 19:07:24 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "minitalk.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <math.h>
+void	ft_putnbr(int n)
+{
+	char	a;
+	char	b;
 
-int		ft_atoi(const char *str);
-void	ft_putchar(char c);
-void	ft_putstr(char *s);
-void	ft_putnbr(int n);
-int		ft_power(int nb, int power);
-
-#endif
+	if (n >= 0 && n <= 9)
+	{
+		a = n + 48 ;
+		write(1, &a, 1);
+	}
+	else if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else if (n < 0)
+	{
+		b = '-';
+		write(1, &b, 1);
+		ft_putnbr(n * (-1));
+	}
+	else
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+}

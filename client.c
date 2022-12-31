@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 14:21:12 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/12/31 20:54:45 by amait-ou         ###   ########.fr       */
+/*   Created: 2022/12/31 22:56:15 by amait-ou          #+#    #+#             */
+/*   Updated: 2022/12/31 22:58:34 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,9 @@
 
 void	ft_client(pid_t pid, char *s)
 {
-	int	bits;
-	int	kill_status;
-
 	while (*s)
 	{
-		bits = 0b10000000;
-		while (bits)
-		{
-			if (*s & bits)
-			{
-				kill_status = kill(pid, SIGUSR2);
-				if (kill_status < 0)
-					return ;
-			}
-			else
-			{
-				kill_status = kill(pid, SIGUSR1);
-				if (kill_status < 0)
-					return ;
-			}
-			bits >>= 1;
-			usleep(250);
-		}
+		ft_sender(pid, *s);
 		++s;
 	}
 }

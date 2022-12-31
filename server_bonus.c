@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:29:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/12/31 20:53:12 by amait-ou         ###   ########.fr       */
+/*   Updated: 2022/12/31 21:58:24 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
 static void	ft_server(int signo, siginfo_t *sig_info, void *context)
 {
@@ -30,6 +30,8 @@ static void	ft_server(int signo, siginfo_t *sig_info, void *context)
 	++i;
 	if (i == 8)
 	{
+		if (ascii == 0)
+			kill(sig_info->si_pid, SIGUSR1);
 		ft_putchar(ascii);
 		i = 0;
 		ascii = 0;

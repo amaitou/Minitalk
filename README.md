@@ -10,6 +10,12 @@ This project aims to set up a communication program in the form of a client and 
 
 **```Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
 
+This project consists of two parts:
+- **Mandatory part**
+- **Bonus Part**
+
+> Note: The **Bonus Part** is not that necessary to validate the project, but it gives some extra XPs and days for the **`The Blackhole`**.
+
 ---
 
 # Signals

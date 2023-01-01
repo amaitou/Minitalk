@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 22:56:15 by amait-ou          #+#    #+#             */
-/*   Updated: 2022/12/31 23:21:00 by amait-ou         ###   ########.fr       */
+/*   Updated: 2023/01/01 12:55:45 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	handler(int signo)
 {
 	if (signo == SIGUSR1)
-		ft_putstr("[*] signal was received !\n");
+		ft_putstr("[*] Message was sent successfully !\n");
 	exit(0);
 }
 

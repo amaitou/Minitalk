@@ -1,3 +1,5 @@
+---
+![Aristotle-Quotes-Featuredjpg](https://user-images.githubusercontent.com/49293816/210177590-ddeda375-331b-44a2-a766-4e9153250a7a.jpeg)
 
 ---
 

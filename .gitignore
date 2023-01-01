@@ -1,4 +1,6 @@
 *.pdf
 *.out
 client
+client_bonus
 server
+server_bonus

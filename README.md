@@ -15,7 +15,7 @@ This project aims to set up a communication program in the form of a client and 
 # Signals
 
 when it comes to the communication between two processes there are plenty of ways to set up this communication, and here are some of them:
-- [shared memory](https://www.geeksforgeeks.org/ipc-shared-memory/)
+- [Shared memory](https://www.geeksforgeeks.org/ipc-shared-memory/)
 - [Named Pipe or FIFO](https://www.geeksforgeeks.org/named-pipe-fifo-example-c-program/)
 - [PIPES](https://www.ibm.com/docs/en/aix/7.1?topic=io-working-pipes)
 - [Signal](https://www.geeksforgeeks.org/signals-c-language/)

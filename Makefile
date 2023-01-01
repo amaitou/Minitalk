@@ -35,7 +35,7 @@ $(NAME_2):
 
 clean:
 	@echo "deleting all the executable files"
-	@rm -f $(NAME) $(NAME_2) $(NAME_BONUS) $(NAME_BONUS)
+	@rm -f $(NAME) $(NAME_2) $(NAME_BONUS) $(NAME_2_BONUS)
 
 fclean: clean
 	@echo "deleting *.a"

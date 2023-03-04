@@ -17,13 +17,9 @@ NAME_2_BONUS = server_bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) $(NAME_2) bonus
+all: $(NAME) $(NAME_2)
 
-bonus:
-	@echo "compiling \033[1;32m$(CLIENT_BONUS)\033[0m"
-	@$(CC) $(CFLAGS) $(CLIENT_BONUS) $(UTILS_BONUS) -o $(NAME_BONUS)
-	@echo "compiling \033[1;32m$(SERVER_BONUS)\033[0m"
-	@$(CC) $(CFLAGS) $(SERVER_BONUS) $(UTILS_BONUS) -o $(NAME_2_BONUS)
+bonus: $(NAME) $(NAME_2) $(NAME_BONUS) $(NAME_2_BONUS)
 
 $(NAME):
 	@echo "compiling \033[1;32m$(CLIENT)\033[0m"
@@ -32,6 +28,14 @@ $(NAME):
 $(NAME_2):
 	@echo "compiling \033[1;32m$(SERVER)\033[0m"
 	@$(CC) $(CFLAGS) $(SERVER) $(UTILS) -o $@
+
+$(NAME_BONUS):
+	@echo "compiling \033[1;32m$(CLIENT_BONUS)\033[0m"
+	@$(CC) $(CFLAGS) $(CLIENT_BONUS) $(UTILS_BONUS) -o $@
+
+$(NAME_2_BONUS):
+	@echo "compiling \033[1;32m$(SERVER_BONUS)\033[0m"
+	@$(CC) $(CFLAGS) $(SERVER_BONUS) $(UTILS_BONUS) -o $@
 
 clean:
 	@echo "deleting all the executable files"
@@ -43,3 +47,4 @@ fclean: clean
 
 re: fclean all
 
+.PHONY: all clean fclean re bonus

@@ -8,7 +8,7 @@
 Speaking of the projects of `42Cursus`, Minitalk belongs to the third circle in the Cursus. <br/>
 This project aims to set up a communication program in the form of a client and a server using signals.
 
-**```Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
+**``` Note: I haven't shared the PDF of this project, as well as, I haven't explained anything due to school privacy reasons!```**
 
 This project consists of two parts:
 - **Mandatory part**
@@ -26,9 +26,9 @@ when it comes to the communication between two processes there are plenty of way
 - [PIPES](https://www.ibm.com/docs/en/aix/7.1?topic=io-working-pipes)
 - [Signal](https://www.geeksforgeeks.org/signals-c-language/)
 
-This project limites you to use only signals to set up this communication between these two processes (`client` & `server`) by sending a message from the `client` to the server according to that last's process id.
+This project limits you to use only signals to set up this communication between these two processes (`client` & `server`) by sending a message from the `client` to the server according to that last's process id.
 
-> Your are allowed to use only these two signals **SIGUSR1** and **SIGUSR2**
+> You are allowed to use only these two signals **SIGUSR1** and **SIGUSR2**
 
 ---
 

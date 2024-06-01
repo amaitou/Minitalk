@@ -48,10 +48,12 @@ This project limits you to use only signals to set up this communication between
 
 ---
 
-# Contact Me
+### **Contact Me**
 
 * [Twitter][_1]
-* [Instagram][_2]
+
+[_1]: https://twitter.com/amait0u
+
 
 [_1]: https://twitter.com/amait0u
 [_2]: https://www.instagram.com/amait0u
